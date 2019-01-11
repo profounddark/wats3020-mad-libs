@@ -10,14 +10,21 @@
 
   <link rel="stylesheet" href="css/main.css">
 
-  <script src="js/main.js" defer></script>
+  <script src="js/jquery-3.3.1.min.js"></script>
+
+  <script defer>
+    var jsFile = "js/main.js";
+    jQuery.getScript(jsFile);
+  </script>
+
+    <!--- <script src="js/main.js" defer></script>-->
 </head>
 
 <body>
-    <h1 id="madlib-title">Title</h1>
+    <h1 id="madlib-title">An Error Has Occurred!</h1>
 
     <pre id="madlib-text">
-        Text will be inserted here.
+        Uh oh! Something has gone wrong with Looney Lips. There was a problem with the story that was loaded. Please try refreshing to try again.
     </pre>
     <hr>
     <p>The original text used for this exercise is <a href="http://famouspoetsandpoems.com/poets/walt_whitman/poems/17466">"O Captain! My Captain" by Walt Whitman.</a></p>

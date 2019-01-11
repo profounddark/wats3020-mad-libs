@@ -108,7 +108,6 @@ let titleHeading = document.querySelector("#madlib-title");
 titleHeading.innerHTML = titleText;
 
 let storyText = `
-
     ${userNumber}
     O ${honorific}! my ${honorific}! our ${adjective1} trip is done;
     The ${vehicle} has weather'd every rack, the ${precious} we sought is won;
