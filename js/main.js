@@ -3,81 +3,41 @@
 // For this assignment you must fill in the code below so that it functions
 // to populate the text of the "Mad Libs" style story in the HTML.
 //
-// In order to achieve this goal, you will need to write prompt() statements
-// to collect input from the user. The input you collect will be used to
-// generate the story.
-//
-//
 // TODO: Write a prompt statement like the one below for each of the
 // variables listed.
 
-let honorific = prompt('Please enter an honorific title (e.g. Mister or Colonel).');
+let authorName = prompt('What is your full name?', 'Your Name Here');
 
-// Using the same prompt() command, populate the following variables:
-//
-// TODO: A variable named "authorName" for authorial attribution.
-let authorName = prompt('What is your full name?');
+// random bits
+let honorific = prompt('Please enter an honorific title (e.g. Mister or Colonel).', 'Captain');
+let crowdBehavior = prompt('What do a lot of people do as a group?', 'call');
+let color = prompt('What is your favorite color?', 'red');
+let familyMember = prompt('Tell me a family relationship (i.e., uncle or sister):', 'father');
 
-// TODO: A variable named "adjective1" for a word used to describe something.
-let adjective1 = prompt('Please enter an adjective:');
+// adjectives
+let adjective1 = prompt('Please enter an adjective:', 'fearful');
+let adjective2 = prompt('Please enter an another adjective:', 'cold');
+let adjective3 = prompt('Please enter a yet another adjective:', 'dead');
+let adjective4 = prompt('Okay, almost there. What is your FOURTH favorite adjective?', 'grim');
+let adjective5 = prompt('Alright, last adjective. What is your FIFTH favorite adjective?', 'daring');
 
-// TODO: A variable named "vehicle" for a mode of transation (e.g. plane, boat, etc.).
-let vehicle = prompt('Tell me the name of some sort of mode of transportation:');
+// stuff about the ship
+let vehicle = prompt('Tell me the name of some sort of mode of transportation:', 'ship');
+let vehiclePart = prompt('What is the name of a part of that vehicle?', 'deck');
+let parking = prompt('Where would you park, dock, or otherwise leave that vehicle?', 'port');
 
-// TODO: A variable named "vehiclePart" for a part of the vehicle you just named.
-let vehiclePart = prompt('What is the name of a part of that vehicle?');
+// parts of the body
+let organ = prompt('What is the name of your favorite internal body part or organ?', 'heart');
+let bodyPart1 = prompt('Tell me the name of your first favorite body part:', 'eyes');
+let bodyPart2 = prompt('Tell me the name of your second favorite body part:', 'arm');
+let bodyPart3 = prompt('Tell me the name of your third favorite body part:', 'head');
 
-// TODO: A variable named "parking" for a location where you park the vehicle you just named.
-let parking = prompt('Where would you park, dock, or otherwise leave that vehicle?');
-
-// TODO: A variable named "precious" for a precious object.
-let precious = prompt('What is the name of a precious object?');
-
-// TODO: A variable named "noiseMaker" for something that makes a sound.
-let noiseMaker = prompt('Tell me the name of your favorite thing that makes noise.');
-
-// TODO: A variable named "crowdBehavior" for something that people do together as a group.
-let crowdBehavior = prompt('What do a lot of people do as a group?');
-
-// TODO: A variable named "adjective2" for a word used to describe something.
-let adjective2 = prompt('Please enter an another adjective:');
-
-// TODO: A variable named "adjective3" for a word used to describe something.
-let adjective3 = prompt('Please enter a yet another adjective:');
-
-// TODO: A variable named "color" for the name of a color.
-let color = prompt('What is your favorite color?');
-
-// TODO: A variable named "familyMember" for the name of a family relationship (e.g. sister, father, etc.).
-let familyMember = prompt('Tell me a family relationship:');
-
-// TODO: A variable named "organ" for the name of a body organ (e.g. heart, liver, spleen, etc.).
-let organ = prompt('What is the name of your favorite internal body part or organ?');
-
-// TODO: A variable named "bodyPart1" for the name of a body part.
-let bodyPart1 = prompt('Tell me the name of your first favorite body part:');
-
-// TODO: A variable named "bodyPart2" for the name of a body part.
-let bodyPart2 = prompt('Tell me the name of your second favorite body part:');
-
-// TODO: A variable named "bodyPart3" for the name of a body part.
-let bodyPart3 = prompt('Tell me the name of your third favorite body part:');
-
-// TODO: A variable named "thing" for an object.
-let thing = prompt('What is the name of an old random object?');
-
-// TODO: A variable named "thing2" for an object you might give somebody you love.
-let thing2 = prompt('What kind of object would you give somebody that you love?');
-
-// TODO: A variable named "thing3" for an object you might give somebody you like.
-let thing3 = prompt('What kind of object would you give somebody that you like?');
-
-// TODO: A variable named "adjective4" for a word used to describe the vehicle.
-let adjective4 = prompt('Okay, back to adjectives. What is your FOURTH favorite adjective?');
-
-// TODO: A variable named "adjective5" for a word used to describe the vehicle.
-let adjective5 = prompt('Alright, almost done. What is your FIFTH favorite adjective?');
-
+// nouns and things
+let precious = prompt('What is the name of a precious object?', 'prize');
+let noiseMaker = prompt('Tell me the name of your favorite thing that makes noise.', 'bells');
+let thing = prompt('What is the name of an old random object?', 'flag');
+let thing2 = prompt('What kind of object would you give somebody that you love?', 'bouquets');
+let thing3 = prompt('What kind of object would you give somebody that you like?', 'wreaths');
 
 ////////////////////////////////////////////////////////////////////////
 // Section Numbers
@@ -97,46 +57,50 @@ let userNumber = 5;
 let number2 = 10;
 let number3 = 15;
 
-
-// DO NOT EDIT BELOW THIS LINE /////////////////////////////////////////
-//
-// The code below his line handles variable replacement into the HTML file.
 // Please do not edit this code unless you are attempting a stretch goal.
 
-let titleText = `O ${honorific}! My ${honorific}! by <small>${authorName}</small>`;
+let titleText = `O ${honorific}! My ${honorific}!`;
 let titleHeading = document.querySelector("#madlib-title");
 titleHeading.innerHTML = titleText;
 
+let authorText = `by ${authorName}`;
+let authorHeading = document.querySelector("#madlib-author");
+authorHeading.innerHTML = authorText;
+
 let storyText = `
-    ${userNumber}
-    O ${honorific}! my ${honorific}! our ${adjective1} trip is done;
-    The ${vehicle} has weather'd every rack, the ${precious} we sought is won;
-    The ${parking} is near, the ${noiseMaker} I hear, the people all ${crowdBehavior},
-    While follow ${bodyPart1} the steady keel, the vessel ${adjective4} and ${adjective5}:
-    But O ${organ}! ${organ}! ${organ}!
-    O the bleeding drops of ${color},
-    Where on the ${vehiclePart} my ${honorific} lies,
-    Fallen ${adjective2} and ${adjective3}.
-
-    ${number2}
-    O ${honorific}! my ${honorific}! rise up and hear the ${noiseMaker};
-    Rise up-for you the ${thing} is flung-for you the bugle trills;
-    For you ${thing2} and ribbon'd ${thing3}-for you the shores a-crowding;
-    For you they ${crowdBehavior}, the swaying mass, their eager faces turning;
-    Here ${honorific}! dear ${familyMember}!
-    This ${bodyPart2} beneath your ${bodyPart3};
-    It is some dream that on the ${vehiclePart},
-    You've fallen ${adjective2} and ${adjective3}.
-
-    ${number3}
-    My ${honorific} does not answer, his lips are pale and still;
-    My ${familyMember} does not feel my arm, he has no pulse nor will;
-    The ${vehicle} is anchor'd safe and sound, its voyage closed and done;
-    From fearful trip, the victor ${vehicle}, comes in with ${precious} won;
-    Exult, O shores, and ring, O ${noiseMaker}!
-    But I, with mournful tread,
-    Walk the ${vehiclePart} my ${honorific} lies,
-    Fallen ${adjective2} and ${adjective3}.
+    ${userNumber}<br>
+    O ${honorific}! my ${honorific}! our ${adjective1} trip is done;<br>
+    The ${vehicle} has weather'd every rack, the ${precious} we sought is won;<br>
+    The ${parking} is near, the ${noiseMaker} I hear, the people all ${crowdBehavior},<br>
+    While follow ${bodyPart1} the steady keel, the vessel ${adjective4} and ${adjective5}:<br>
+    But O ${organ}! ${organ}! ${organ}!<br>
+    O the bleeding drops of ${color},<br>
+    Where on the ${vehiclePart} my ${honorific} lies,<br>
+    Fallen ${adjective2} and ${adjective3}.<br>
+    <br>
+    ${number2}<br>
+    O ${honorific}! my ${honorific}! rise up and hear the ${noiseMaker};<br>
+    Rise up-for you the ${thing} is flung-for you the bugle trills;<br>
+    For you ${thing2} and ribbon'd ${thing3}-for you the shores a-crowding;<br>
+    For you they ${crowdBehavior}, the swaying mass, their eager faces turning;<br>
+    Here ${honorific}! dear ${familyMember}!<br>
+    This ${bodyPart2} beneath your ${bodyPart3};<br>
+    It is some dream that on the ${vehiclePart},<br>
+    You've fallen ${adjective2} and ${adjective3}.<br>
+    <br>
+    ${number3}<br>
+    My ${honorific} does not answer, his lips are pale and still;<br>
+    My ${familyMember} does not feel my arm, he has no pulse nor will;<br>
+    The ${vehicle} is anchor'd safe and sound, its voyage closed and done;<br>
+    From fearful trip, the victor ${vehicle}, comes in with ${precious} won;<br>
+    Exult, O shores, and ring, O ${noiseMaker}!<br>
+    But I, with mournful tread,<br>
+    Walk the ${vehiclePart} my ${honorific} lies,<br>
+    Fallen ${adjective2} and ${adjective3}.<br>
 `;
 let storyParagraph = document.querySelector("#madlib-text");
 storyParagraph.innerHTML = storyText;
+
+let endnoteText = `This Looney Lips fill-in-the-blank story is based on the original poem <a href="http://famouspoetsandpoems.com/poets/walt_whitman/poems/17466"><i>O Captain! My Captain</i></a> by <a href="https://www.poets.org/poetsorg/poet/walt-whitman">Walt Whitman</a>.`;
+let endnoteParagraph = document.querySelector("#madlib-endnote");
+endnoteParagraph.innerHTML = endnoteText;

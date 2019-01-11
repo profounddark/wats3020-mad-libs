@@ -2,31 +2,37 @@
 
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+    <meta charset="utf-8">
 
-  <title>Welcome to Looney Lips!</title>
-  <meta name="description" content="Looney Lips: A Mad Libs Experience">
-  <meta name="author" content="Andrew Asplund">
+    <title>Welcome to Looney Lips!</title>
+    <meta name="description" content="Looney Lips: A Mad Libs Experience">
+    <meta name="author" content="Andrew Asplund">
 
-  <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main.css">
 
-  <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+        //This snippet randomly selects a script (by name) from an array. The scripts still have to exist in the js folder, though.
+        var JSFiles = ['main.js', 'dayinlife.js']; // put all the possible JS files to load.
+        function randomJS()
+        {
+            // pick a random file from the list in JSFiles
+            var index = Math.floor(Math.random()*JSFiles.length); 
+       
+            // Append JS file to head section.
+            var script = document.createElement('script');
+            script.src = 'js/' + JSFiles[index];
+            document.getElementsByTagName('head')[0].appendChild(script);
+        };
+    </script>
 
-  <script defer>
-    var jsFile = "js/main.js";
-    jQuery.getScript(jsFile);
-  </script>
-
-    <!--- <script src="js/main.js" defer></script>-->
 </head>
 
-<body>
-    <h1 id="madlib-title">An Error Has Occurred!</h1>
+<body onload="randomJS();">
+    <h1 id="madlib-title">Now creating your story!</h1>
+    <h2 id="madlib-author">by You!</h2>
 
-    <pre id="madlib-text">
-        Uh oh! Something has gone wrong with Looney Lips. There was a problem with the story that was loaded. Please try refreshing to try again.
-    </pre>
+    <p id="madlib-text">Your story is being created! Pay attention to the prompts. If you don't see any prompts, try loading again.</p>
     <hr>
-    <p>The original text used for this exercise is <a href="http://famouspoetsandpoems.com/poets/walt_whitman/poems/17466">"O Captain! My Captain" by Walt Whitman.</a></p>
+    <p id="madlib-endnote"></p>
 </body>
 </html>
