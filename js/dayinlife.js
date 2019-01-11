@@ -29,7 +29,7 @@ let authorText = `by ${authorName}`;
 let authorHeading = document.querySelector("#madlib-author");
 authorHeading.innerHTML = authorText;
 
-let storyText = `Once upon a time, a big ${animal} named ${animalname} ate a very ${adjective} ${food}. Eating the ${adjective} ${food} caused ${animalname} to feel very ${feeling}. <br> After a few ${timeunit}s, ${animalname} felt ${feeling2} and decided to ${action}. After ${animalname} finished doing that, they became very ${feeling3} because they found a ${adjective2} ${food} tp eat!`;
+let storyText = `Once upon a time, a big ${animal} named ${animalname} ate a very ${adjective} ${food}. Eating the ${adjective} ${food} caused ${animalname} to feel very ${feeling}.</p><p>After a few ${timeunit}s, ${animalname} felt ${feeling2} and decided to ${action}. After ${animalname} finished doing that, they became very ${feeling3} because they found a ${adjective2} ${food} tp eat!`;
 let storyParagraph = document.querySelector("#madlib-text");
 storyParagraph.innerHTML = storyText;
 
