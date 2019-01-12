@@ -21,7 +21,7 @@ let timeunit = prompt('Please provide a unit of time (i.e., second or year):', '
 
 let action = prompt('What is your favorite action verb (i.e., run, fly)?', 'vomit');
 
-let titleText = `A Day in the Life of ${animalname} the ${animal}`;
+let titleText = `A Day in the Life of ${animalname}`;
 let titleHeading = document.querySelector("#madlib-title");
 titleHeading.innerHTML = titleText;
 
@@ -29,7 +29,7 @@ let authorText = `by ${authorName}`;
 let authorHeading = document.querySelector("#madlib-author");
 authorHeading.innerHTML = authorText;
 
-let storyText = `Once upon a time, a big ${animal} named ${animalname} ate a very ${adjective} ${food}. Eating the ${adjective} ${food} caused ${animalname} to feel very ${feeling}.</p><p>After a few ${timeunit}s, ${animalname} felt ${feeling2} and decided to ${action}. After ${animalname} finished doing that, they became very ${feeling3} because they found a ${adjective2} ${food} tp eat!`;
+let storyText = `<p>Once upon a time, a big ${animal} named ${animalname} ate a very ${adjective} ${food}. Eating the ${adjective} ${food} caused ${animalname} to feel very ${feeling}.</p> <p>After a few ${timeunit}s, ${animalname} felt ${feeling2} and decided to ${action}. After ${animalname} finished doing that, they became very ${feeling3} because they found a ${adjective2} ${food} tp eat!</p>`;
 let storyParagraph = document.querySelector("#madlib-text");
 storyParagraph.innerHTML = storyText;
 

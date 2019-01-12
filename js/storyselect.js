@@ -1,4 +1,4 @@
-var StoryFiles = ['ocaptain', 'dayinlife']; // put all the possible JS files to load.
+var StoryFiles = ['ocaptain', 'dayinlife', 'excitingnews']; // put all the possible JS files to load.
  
 // Returns the value of the query variable searchTerm.
 function getQueryVariable(searchTerm)
@@ -29,8 +29,14 @@ function storyChoose()
     // Checks to see if the query string contains story=XYZ.
     var findName = getQueryVariable('story');
 
+    // this is a testing override; it chooses a story not contained in the list.
+    if (findName == 'test')
+    {
+        storyName = findName;
+        console.log('Testing override. Using TEST story.');
+    }
     // checks if XYZ is in the array of StoryFiles
-    if (inArray(findName, StoryFiles))
+    else if (inArray(findName, StoryFiles))
     {
         // If it is, select it
         storyName = findName;

@@ -68,7 +68,7 @@ let authorHeading = document.querySelector("#madlib-author");
 authorHeading.innerHTML = authorText;
 
 let storyText = `
-    ${userNumber}<br>
+    <p>${userNumber}<br>
     O ${honorific}! my ${honorific}! our ${adjective1} trip is done;<br>
     The ${vehicle} has weather'd every rack, the ${precious} we sought is won;<br>
     The ${parking} is near, the ${noiseMaker} I hear, the people all ${crowdBehavior},<br>
@@ -97,6 +97,7 @@ let storyText = `
     But I, with mournful tread,<br>
     Walk the ${vehiclePart} my ${honorific} lies,<br>
     Fallen ${adjective2} and ${adjective3}.<br>
+    </p>
 `;
 let storyParagraph = document.querySelector("#madlib-text");
 storyParagraph.innerHTML = storyText;
