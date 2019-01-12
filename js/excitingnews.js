@@ -31,7 +31,7 @@ let authorHeading = document.querySelector("#madlib-author");
 authorHeading.innerHTML = authorText;
 
 let storyText =`
-<p>When ${personname1} and ${personname2} first met at that special ${event}, they new that they had hit it off. ${personname1} just could not resist ${personname2}'s ${physicalfeature}. Only a few ${unitoftime}s later, they were engaged to be married.</p>
+<p>When ${personname1} and ${personname2} first met at that special ${event}, they knew that they had hit it off. ${personname1} just could not resist ${personname2}'s ${physicalfeature}. Only a few ${unitoftime}s later, they were engaged to be married.</p>
 <p>At their wedding, people were surprised to see a pack of ${wildanimal1}s and ${wildanimal2}s as part of the wedding party. Only a few guests were ${pastpartverb}. Everybody had a really ${adjective} time at the wedding party. Well, everybody except for ${personname1} and ${personname2}.</p>
 <p>As it ends up, something unusual happened at the party. One of the ${wildanimal1}s had gotten a little too close to ${personname1}. And, as it ends up, this caused ${personname1} to get ${condition}. Because of this, ${personname2} was not sure whether to feel ${feeling1} or ${feeling2}. But, either way, it turned out to be very exciting news for both of them.</p>
 `;
