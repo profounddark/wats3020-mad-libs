@@ -52,10 +52,9 @@ let thing3 = prompt('What kind of object would you give somebody that you like?'
 // Use any operator you would like to add, multiply, divide, or otherwise
 // change the number that the user submitted.
 
-// temporary assignments
-let userNumber = 5;
-let number2 = 10;
-let number3 = 15;
+let userNumber = prompt('What is your favorite number?', 5);
+number2 = userNumber * 10;
+number3 = (number2 / 5) + 19;
 
 // Please do not edit this code unless you are attempting a stretch goal.
 
